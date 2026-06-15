@@ -9,26 +9,10 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Arquivos temporários
-*.tmp
-*.log
-
-# Configurações do VS Code
+# Configurações IDE
 .vscode/
-
-# Configurações do PyCharm
 .idea/
 
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Arquivos de modelos treinados
-# Remova estas linhas se quiser versionar os modelos
-*.pkl
-
-# Relatórios temporários
-relatorios/
