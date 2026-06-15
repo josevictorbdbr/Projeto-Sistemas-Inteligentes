@@ -1,5 +1,4 @@
 # Avaliação Semestral — Sistemas Inteligentes
-
 Projeto com três problemas de Machine Learning: clustering, classificação e inferência.
 
 ## Como Rodar:
@@ -9,9 +8,7 @@ Projeto com três problemas de Machine Learning: clustering, classificação e i
 - Os arquivos `.pkl` são gerados localmente na pasta `modelos/`
 
 ## 1. Heart Failure (Clustering)
-
 **Objetivo:** Agrupar pacientes e identificar o cluster de um novo paciente.
-
 **Dataset:** https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records
 
 ### Pipeline
@@ -21,13 +18,10 @@ Projeto com três problemas de Machine Learning: clustering, classificação e i
 - Definição do número de clusters (método do cotovelo)
 - Treinamento com `KMeans`
 
-**Resultado:** Agrupamento de pacientes baseado em características clínicas.
-
+**Justificativa:** KMeans foi escolhido por ser adequado para dados normalizados. As colunas binárias (anemia, diabetes, pressão alta, sexo, tabagismo) foram mantidas como numéricas pois os valores 0 e 1 participam normalmente do cálculo de distância euclidiana após normalização.
 
 ## 2. Wine Quality (Classificação)
-
 **Objetivo:** Prever a qualidade do vinho (tinto e branco).
-
 **Dataset:** https://archive.ics.uci.edu/dataset/186/wine+quality
 
 ### Pipeline
@@ -37,18 +31,13 @@ Projeto com três problemas de Machine Learning: clustering, classificação e i
 - Split 70/30 com estratificação
 - Balanceamento com `SMOTE` (somente treino)
 - Normalização com `StandardScaler`
-- Treinamento dos modelos:
-  - Random Forest
-  - SVM
-  - Logistic Regression
+- Treinamento dos modelos
 - Otimização com `RandomizedSearchCV`
 - Seleção do melhor modelo via F1-score (weighted)
 
-**Resultado:** Random Forest foi o melhor modelo.
-
+**Justificativa:** Random Forest foi o melhor modelo. Lida bem com o desbalanceamento de classes (vinhos de qualidade extrema são raros) e é robusto. SVM teve desempenho inferior nas classes minoritárias e Regressão Logística apresentou F1 baixo.
 
 ## 3. Black Friday Sales (Classificação múltipla)
-
 **Objetivo:** Prever:
 - Categoria do produto
 - Forma de pagamento
