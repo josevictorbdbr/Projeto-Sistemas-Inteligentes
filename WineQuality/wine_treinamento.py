@@ -15,8 +15,8 @@ from imblearn.over_sampling import SMOTE
 
 
 #Abrir arquivos de dados e juntar ambos
-vinho_tinto = pd.read_csv('winequality-red.csv', sep=';')
-vinho_branco = pd.read_csv('winequality-white.csv', sep=';')
+vinho_tinto = pd.read_csv('dados/winequality-red.csv', sep=';')
+vinho_branco = pd.read_csv('dados/winequality-white.csv', sep=';')
 
 dados = pd.concat([vinho_tinto, vinho_branco],ignore_index=True)
 
